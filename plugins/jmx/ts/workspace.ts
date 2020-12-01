@@ -90,7 +90,7 @@ namespace Jmx {
     private jolokiaList(callback, flags): void {
       let listMethod = this.jolokiaStatus.listMethod;
       switch (listMethod) {
-        case JVM.JolokiaListMethod.LIST_WITH_RBAC:
+        case JVM.JolokiaListMethod.LIST_OPTIMISED:
           log.debug("Invoking Jolokia list mbean in RBAC mode");
           flags.maxDepth = 9;
           this.jolokia.execute(this.jolokiaStatus.listMBean, "list()", Core.onSuccess(callback, flags));
