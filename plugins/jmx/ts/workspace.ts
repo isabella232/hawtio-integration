@@ -753,8 +753,8 @@ namespace Jmx {
         canInvoke = mbean.canInvoke;
       }
       if (canInvoke && methods && methods.length > 0) {
-        const opsByString = mbean['opByString'];
-        const ops = mbean['op'];
+        const opsByString = mbean.opByString;
+        const ops = mbean.op;
         if (opsByString && ops) {
           canInvoke = this.resolveCanInvokeInOps(ops, opsByString, methods);
         }
